@@ -5,8 +5,6 @@ Calibration of multiple Kinect cameras to obtain a single positioning coordinate
 
 - Align Depth and RGB image using the MapDepthFrameToColorFrame() method available for Kinect Windows SDK and save depth mappings in a csv file.
 
-< pictures of normal vs aligned frames> 
-
 - Extract checkerboard corners using a combination of the results obtained by the cornerHarris and findChessboardCorners detectors (available in OpenCV 2).
 
 < picture of extracted corners>
@@ -21,7 +19,7 @@ Calibration of multiple Kinect cameras to obtain a single positioning coordinate
 
 - Compute rotation matrix and translation vector (math)
 
-- Extract the cameras' coordinate systems and apply transformations.
+- Extract the cameras' coordinate systems and apply transformations (always from one camera to the other).
 
 # reference
 
