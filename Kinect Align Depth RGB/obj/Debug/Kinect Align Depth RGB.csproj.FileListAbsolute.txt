@@ -1,0 +1,16 @@
+C:\Users\Titiana\Desktop\Calibration\Kinect-Align-Depth-RGB-master\Kinect Align Depth RGB\Kinect Align Depth RGB\bin\Debug\Kinect Align Depth RGB.exe.config
+C:\Users\Titiana\Desktop\Calibration\Kinect-Align-Depth-RGB-master\Kinect Align Depth RGB\Kinect Align Depth RGB\bin\Debug\Kinect Align Depth RGB.exe
+C:\Users\Titiana\Desktop\Calibration\Kinect-Align-Depth-RGB-master\Kinect Align Depth RGB\Kinect Align Depth RGB\bin\Debug\Kinect Align Depth RGB.pdb
+C:\Users\Titiana\Desktop\Calibration\Kinect-Align-Depth-RGB-master\Kinect Align Depth RGB\Kinect Align Depth RGB\bin\Debug\Microsoft.Kinect.dll
+C:\Users\Titiana\Desktop\Calibration\Kinect-Align-Depth-RGB-master\Kinect Align Depth RGB\Kinect Align Depth RGB\bin\Debug\Microsoft.Kinect.xml
+C:\Users\Titiana\Desktop\Calibration\Kinect-Align-Depth-RGB-master\Kinect Align Depth RGB\Kinect Align Depth RGB\obj\Debug\MainWindow.g.cs
+C:\Users\Titiana\Desktop\Calibration\Kinect-Align-Depth-RGB-master\Kinect Align Depth RGB\Kinect Align Depth RGB\obj\Debug\App.g.cs
+C:\Users\Titiana\Desktop\Calibration\Kinect-Align-Depth-RGB-master\Kinect Align Depth RGB\Kinect Align Depth RGB\obj\Debug\Kinect Align Depth RGB_MarkupCompile.cache
+C:\Users\Titiana\Desktop\Calibration\Kinect-Align-Depth-RGB-master\Kinect Align Depth RGB\Kinect Align Depth RGB\obj\Debug\Kinect Align Depth RGB_MarkupCompile.lref
+C:\Users\Titiana\Desktop\Calibration\Kinect-Align-Depth-RGB-master\Kinect Align Depth RGB\Kinect Align Depth RGB\obj\Debug\MainWindow.baml
+C:\Users\Titiana\Desktop\Calibration\Kinect-Align-Depth-RGB-master\Kinect Align Depth RGB\Kinect Align Depth RGB\obj\Debug\Kinect Align Depth RGB.g.resources
+C:\Users\Titiana\Desktop\Calibration\Kinect-Align-Depth-RGB-master\Kinect Align Depth RGB\Kinect Align Depth RGB\obj\Debug\Kinect_Align_Depth_RGB.Properties.Resources.resources
+C:\Users\Titiana\Desktop\Calibration\Kinect-Align-Depth-RGB-master\Kinect Align Depth RGB\Kinect Align Depth RGB\obj\Debug\Kinect Align Depth RGB.csproj.GenerateResource.Cache
+C:\Users\Titiana\Desktop\Calibration\Kinect-Align-Depth-RGB-master\Kinect Align Depth RGB\Kinect Align Depth RGB\obj\Debug\Kinect Align Depth RGB.exe
+C:\Users\Titiana\Desktop\Calibration\Kinect-Align-Depth-RGB-master\Kinect Align Depth RGB\Kinect Align Depth RGB\obj\Debug\Kinect Align Depth RGB.pdb
+C:\Users\Titiana\Desktop\Calibration\Kinect-Align-Depth-RGB-master\Kinect Align Depth RGB\Kinect Align Depth RGB\obj\Debug\Kinect Align Depth RGB.csprojResolveAssemblyReference.cache
