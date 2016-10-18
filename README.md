@@ -22,3 +22,11 @@ Calibration of multiple Kinect cameras to obtain a single positioning coordinate
 - Compute rotation matrix and translation vector (math)
 
 - Extract the cameras' coordinate systems and apply transformations.
+
+# reference
+
+- Rizwan Macknojia, Alberto Chávez-Aragón and Pierre Payeur, Robert Laganière, "Calibration of a Network of Kinect Sensors for Robotic Inspection over a Large Workspace"
+
+- P. T. Boggs and J. E. Rogers, “Orthogonal Distance Regression,” in “Statistical analysis of measurement error models and applications: proceedings of the AMS-IMS-SIAM joint summer research conference held June 10-16, 1989,” Contemporary Mathematics, vol. 112, pg. 186, 1990.
+
+- Z. Zhang, "Camera Calibration: a Personal Retrospective"
