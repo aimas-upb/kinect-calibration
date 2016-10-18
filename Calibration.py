@@ -4,9 +4,6 @@ import math
 import scipy.odr
 
 eps = 0.1
-inf = (1<<20)
-nrlin = 8
-nrcol = 9
 
 #load mappings
 dataf1 = open('/home/pauey/AIMAS/imagine_prel/Camera1_mapping.txt', 'r')
