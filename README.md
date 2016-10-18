@@ -29,4 +29,4 @@ Calibration of multiple Kinect cameras to obtain a single positioning coordinate
 
 - P. T. Boggs and J. E. Rogers, “Orthogonal Distance Regression,” in “Statistical analysis of measurement error models and applications: proceedings of the AMS-IMS-SIAM joint summer research conference held June 10-16, 1989,” Contemporary Mathematics, vol. 112, pg. 186, 1990.
 
-- Z. Zhang, "Camera Calibration: a Personal Retrospective"
+- Microsoft Research, "Zhang's Camera Calibration"
