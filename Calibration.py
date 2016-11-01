@@ -155,7 +155,7 @@ def project_point(point, params): #project points on plane
 	return (ans[0][0], ans[0][1], ans[0][2])
 
 points_camera1 = get_corners(filename1, depth1)
-points_camera2 = get_corners(filename1, depth1)
+points_camera2 = get_corners(filename2, depth2)
 
 projected_points_camera1 = []
 projected_points_camera2 = []
