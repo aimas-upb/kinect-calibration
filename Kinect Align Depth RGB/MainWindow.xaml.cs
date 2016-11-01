@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
+
 using System.Diagnostics;
 
 
@@ -26,19 +27,19 @@ namespace Kinect_Align_Depth_RGB
     {
         private KinectSensor _sensor;
         private WriteableBitmap _bitmap;
+        private WriteableBitmap _bitmapD;
+        private WriteableBitmap _bitmapT;
+        private WriteableBitmap _bitmapF;
+        private WriteableBitmap colorBitmap;
         private byte[] _bitmapBits;
-        private byte[] _depthBits;
-        private byte[] _myBits;
-        private WriteableBitmap _bitmapC;
-
-        private WriteableBitmap _myBitmap;
-        private byte[] _bitmapBitsC;
+        private byte[] _bitmapBitsF;
+        private byte[] _bitmapBitsT;
+        private short[] _bitmapBitsD;
         private ColorImagePoint[] _mappedDepthLocations;
         private byte[] _colorPixels = new byte[0];
-        private byte[] _myPixels = new byte[0];
-        private byte[] _colorPixelsC = new byte[0];
+        private byte[] _colorPixels2 = new byte[0];
         private short[] _depthPixels = new short[0];
-        System.IO.StreamWriter file = new System.IO.StreamWriter("C:\\Users\\Titiana\\Desktop\\Calibration\\Camera1_mapping.csv");
+        int c = 0;
 
         void CreateThumbnail(string filename, BitmapSource image5)
         {
@@ -86,7 +87,7 @@ namespace Kinect_Align_Depth_RGB
                     if (_colorPixels.Length != colorFrame.PixelDataLength)
                     {
                         _colorPixels = new byte[colorFrame.PixelDataLength];
-                        _myPixels = new byte[colorFrame.PixelDataLength];
+                        _colorPixels2 = new byte[colorFrame.PixelDataLength];
                         _bitmap = new WriteableBitmap(640, 480, 96.0, 96.0, PixelFormats.Bgr32, null);
                         _bitmapBits = new byte[640 * 480 * 4];
                         this.Image.Source = _bitmap;
@@ -110,13 +111,14 @@ namespace Kinect_Align_Depth_RGB
                     }
 
                     depthFrame.CopyPixelDataTo(_depthPixels);
-                    gotDepth = true;
                 }
+
+                gotDepth = true;
+
             }
 
             // Put the color image into _bitmapBits
-            //int c = _depthPixels.Length; 307200 * 4 = 1228800
-            for (int i = 0; i < _colorPixels.Length; i += 4) //1228800
+            for (int i = 0; i < _colorPixels.Length; i += 4)
             {
                 _bitmapBits[i + 3] = 255;
                 _bitmapBits[i + 2] = _colorPixels[i + 2];
@@ -125,33 +127,25 @@ namespace Kinect_Align_Depth_RGB
             }
 
             this._sensor.MapDepthFrameToColorFrame(DepthImageFormat.Resolution640x480Fps30, _depthPixels, ColorImageFormat.RgbResolution640x480Fps30, _mappedDepthLocations);
-
-            _bitmap.WritePixels(new Int32Rect(0, 0, _bitmap.PixelWidth, _bitmap.PixelHeight), _bitmapBits, _bitmap.PixelWidth * sizeof(int), 0);
-
-            CreateThumbnail("C:\\Users\\Titiana\\Desktop\\Calibration\\Camera1_rgb.bmp", _bitmap.Clone());
-
-            double[][] DepthMatrix = new double[640][];
-            for(int i = 0; i < 640; ++i)
-            {
-                DepthMatrix[i] = new double[480];
-            }
-            for (int i = 0; i < _depthPixels.Length; i++)
-            {
-                int depthVal = _depthPixels[i] >> DepthImageFrame.PlayerIndexBitmaskWidth;
-                ColorImagePoint point = _mappedDepthLocations[i];
-                DepthMatrix[point.X][point.Y] = depthVal;
-            }
             
-            for (int i = 0; i < 640; i++) {
-                string line = "";
-                for (int j = 0; j < 480; j++)
+         
+            c = 0;
+            while (c < 10)
+            {
+                c++;
+                _bitmap.WritePixels(new Int32Rect(0, 0, _bitmap.PixelWidth, _bitmap.PixelHeight), _bitmapBits, _bitmap.PixelWidth * sizeof(int), 0);
+                CreateThumbnail("C:\\Users\\Titiana\\Desktop\\final\\Kinect-Align-Depth-RGB-master\\Camera2\\rgb" + c.ToString() + ".bmp", _bitmap.Clone());
+                System.IO.StreamWriter file = new System.IO.StreamWriter("C:\\Users\\Titiana\\Desktop\\final\\Kinect-Align-Depth-RGB-master\\Camera2\\mapping" + c.ToString() + ".txt");
+                
+                for (int i = 0; i < _depthPixels.Length; i++)
                 {
-                    line += DepthMatrix[i][j].ToString();
-                    if(j < 479)
-                        line += ",";
+                    int depthVal = _depthPixels[i] >> DepthImageFrame.PlayerIndexBitmaskWidth;
+                    ColorImagePoint point = _mappedDepthLocations[i];
+                    string line = depthVal.ToString() + " " + point.X.ToString() + " " + point.Y.ToString() + "\n";
+                    file.Write(line);
                 }
-                line += "\n";
-                file.Write(line);
+                
+                file.Close();
             }
         }
 
