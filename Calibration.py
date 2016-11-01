@@ -6,21 +6,19 @@ import scipy.odr
 eps = 0.1
 
 #load mappings
-dataf1 = open('/home/pauey/AIMAS/imagine_prel/Camera1_mapping.csv', 'r')
-dataf2 = open('/home/pauey/AIMAS/imagine_prel/Camera2_mapping.csv', 'r')
+dataf1 = open('/home/pauey/AIMAS/FinData2/Camera1/mapping1.txt', 'r')
+dataf2 = open('/home/pauey/AIMAS/FinData2/Camera2/mapping1.txt', 'r')
 
 data1 = np.loadtxt(dataf1)
 depth1 = {}
 data2 = np.loadtxt(dataf2)
 depth2 = {}
 
-for i in range(0, 640):
-	for j in range(0, 480):
-		depth1[(i, j)] = data1[i][j]
+for i in range(0, data1.shape[0]):
+	depth1[(data1[i][1], data1[i][2])] = data1[i][0]
 
-for i in range(0, 640):
-	for j in range(0, 480):
-		depth2[(i, j)] = data2[i][j]
+for i in range(0, data2.shape[0]):
+	depth2[(data2[i][1], data2[i][2])] = data2[i][0]
 
 def mindist(point, point_set): #calculate the minimal distance between current point and the checkerboard points
 	d = 640
@@ -31,8 +29,8 @@ def mindist(point, point_set): #calculate the minimal distance between current p
 	return math.sqrt(d)
 
 #load images
-filename1 = '/home/pauey/AIMAS/imagine_prel/rgb1.bmp' 
-filename2 = '/home/pauey/AIMAS/imagine_prel/rgb2.bmp'
+filename1 = '/home/pauey/AIMAS/FinData2/Camera1/rgb1.bmp' 
+filename2 = '/home/pauey/AIMAS/FinData2/Camera2/rgb1.bmp'
 
 def get_corners(filename, depth):
 	# get harris corners
