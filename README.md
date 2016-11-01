@@ -25,6 +25,11 @@ R = [[  9.83507715e-01   8.26415576e-03  -1.31342591e-04]
      
 T = [  5.87812299e-01   6.94506028e+00   1.70568353e+03]
 
+- Difference between camera frames in cm and degrees:
+
+dx = 120 cm, dy = 21 cm, dz = -5 cm
+ux = 125°, uy = 20°, uz = 85°
+
 # reference
 
 - Rizwan Macknojia, Alberto Chávez-Aragón and Pierre Payeur, Robert Laganière, "Calibration of a Network of Kinect Sensors for Robotic Inspection over a Large Workspace"
