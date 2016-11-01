@@ -7,7 +7,7 @@ Calibration of multiple Kinect cameras to obtain a single positioning coordinate
 
 - Extract checkerboard corners using a combination of the results obtained by the cornerHarris and findChessboardCorners detectors (available in OpenCV 2).
 
-< picture of extracted corners>
+![alt tag](https://github.com/paula-gradu/kinect-calibration/blob/master/Screenshot%20from%202016-11-01%2013:13:30.png)
 
 - Find best fit plane using Orthogonal Distance Regression (available in scipy.odr)
 
@@ -15,11 +15,15 @@ Calibration of multiple Kinect cameras to obtain a single positioning coordinate
 
 - Extract origin and normal of the plane.
 
-< picture of origin and normal>
-
-- Compute rotation matrix and translation vector (math)
+- Compute rotation matrix and translation vector.
 
 - Extract the cameras' coordinate systems and apply transformations (always from one camera to the other).
+
+R = [[  9.83507715e-01   8.26415576e-03  -1.31342591e-04]
+     [ -8.26302378e-03   9.83506358e-01  -1.38576655e-04]
+     [ -8.26302378e-03   9.83506358e-01  -1.38576655e-04]] 
+     
+T = [  5.87812299e-01   6.94506028e+00   1.70568353e+03]
 
 # reference
 
