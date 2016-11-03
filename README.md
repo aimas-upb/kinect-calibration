@@ -27,8 +27,8 @@ T = [  5.87812299e-01   6.94506028e+00   1.70568353e+03]
 
 - Images used for calibration:
 
-![alt tag](https://github.com/paula-gradu/kinect-calibration/blob/master/rgb1_1.jpg =320x240)
-![alt tag](https://github.com/paula-gradu/kinect-calibration/blob/master/rgb1.jpg =320x240)
+<img src="https://github.com/paula-gradu/kinect-calibration/blob/master/rgb1_1.jpg" height="320" width="240">
+<img src="https://github.com/paula-gradu/kinect-calibration/blob/master/rgb1.jpg" height="320" width="240">
 
 - Difference between camera frames in cm and degrees:
 
