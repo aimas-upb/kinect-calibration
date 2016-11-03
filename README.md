@@ -7,7 +7,7 @@ Calibration of multiple Kinect cameras to obtain a single positioning coordinate
 
 - Extract checkerboard corners using a combination of the results obtained by the cornerHarris and findChessboardCorners detectors (available in OpenCV 2).
 
-![alt tag](https://github.com/paula-gradu/kinect-calibration/blob/master/Screenshot%20from%202016-11-01%2013:13:30.png)
+<img src ="https://github.com/paula-gradu/kinect-calibration/blob/master/Screenshot%20from%202016-11-01%2013:13:30.png" width="400")>
 
 - Find best fit plane using Orthogonal Distance Regression (available in scipy.odr)
 
@@ -27,8 +27,8 @@ T = [  5.87812299e-01   6.94506028e+00   1.70568353e+03]
 
 - Images used for calibration:
 
-<img src="https://github.com/paula-gradu/kinect-calibration/blob/master/rgb1_1.jpg" height="320" width="240">
-<img src="https://github.com/paula-gradu/kinect-calibration/blob/master/rgb1.jpg" height="320" width="240">
+<img src="https://github.com/paula-gradu/kinect-calibration/blob/master/rgb1_1.jpg" width="240">
+<img src="https://github.com/paula-gradu/kinect-calibration/blob/master/rgb1.jpg" width="240">
 
 - Difference between camera frames in cm and degrees:
 
